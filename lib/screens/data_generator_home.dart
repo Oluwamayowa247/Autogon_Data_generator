@@ -18,41 +18,15 @@ class _DataGeneratorHomeState extends State<DataGeneratorHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Row(
-      //     mainAxisAlignment:
-      //         MainAxisAlignment.spaceBetween, // Space items evenly
-      //     children: [
-      //       Image.asset(
-      //         'lib/image/autogon_logo.jpg',
-      //         height: 50,
-      //         width: 50,
-      //       ),
-      //       const Text(
-      //         'Autogon Data Generator',
-      //         style: TextStyle(
-      //           color: Colors.black,
-      //           fontSize: 24,
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      //   backgroundColor: Colors.orange[300], // Consider a warmer orange shade
-      //   elevation: 0,
-      // ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment:
-              CrossAxisAlignment.center, // Align content horizontally
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
               'Create a Dataset',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold, // Add emphasis
-              ),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             TextField(
@@ -80,7 +54,7 @@ class _DataGeneratorHomeState extends State<DataGeneratorHome> {
             ),
             const SizedBox(height: 40),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center, // Center buttons
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   onPressed: () async {
@@ -102,16 +76,15 @@ class _DataGeneratorHomeState extends State<DataGeneratorHome> {
                   },
                   child: const Text('Generate Data'),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange[300], // Match app bar color
+                    backgroundColor: Colors.orange[300],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                 ),
-                const SizedBox(width: 20), // Add spacing between buttons
+                const SizedBox(width: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // ignore: unnecessary_null_comparison
                     if (datasetUrl != null) {
                       showDialog(
                         context: context,
@@ -158,9 +131,6 @@ class _DataGeneratorHomeState extends State<DataGeneratorHome> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: const Text(
-        '', // Remove empty bottom navigation bar (optional)
       ),
     );
   }
