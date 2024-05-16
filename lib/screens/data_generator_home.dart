@@ -123,7 +123,7 @@ class _DataGeneratorHomeState extends State<DataGeneratorHome> {
             ),
             const SizedBox(height: 20),
             Text(
-              'Powered by Autogon © 2023 Autogon',
+              'Powered by Autogon © 2024 Autogon',
               style: const TextStyle(
                 fontSize: 12,
                 color: Colors.grey,
