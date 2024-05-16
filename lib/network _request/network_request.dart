@@ -47,7 +47,8 @@ Future<String?> generateDataUrl(TextEditingController promptController,
     'rows': int.tryParse(rowsController.text),
   });
 
-  var apiKey = 'XXXXXXXXXXXXXXXXXXXXXX'; // Replace with your actual API key
+  var apiKey =
+      'EFnjXe1p.3F7SbrtWEfJsxntIxENe7czicIwCo2po'; // Replace with your actual API key
 
   var response = await http.post(
     Uri.parse(url),
